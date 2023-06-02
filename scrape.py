@@ -30,7 +30,7 @@ def albert_search(query):
   soup = bs(response, 'html.parser')
   results = soup.find_all(class_='product-card-container')
 
-  print('Albertson\'s')
+  print('\nAlbertson\'s')
   for item in results[:5]:
     name = item.find(class_='product-title__name').text
     pricePer = item.find(class_='product-title__qty').text
